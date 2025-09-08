@@ -1,0 +1,102 @@
+/* Base styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9; /* lighter background */
+  color: #333;
+}
+
+header {
+  background: #336699; /* lighter navy */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+#course-title {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+  background: white;
+  color: #336699;
+  border-radius: 4px;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr; /* stacked on mobile */
+  gap: 1rem;
+}
+
+h1 {
+  text-align: center; /* Center the main title */
+  margin-bottom: 1rem;
+  color: #224466; /* softer dark blue */
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  text-align: center; /* lock About Me & Uganda at the top */
+  margin-bottom: 1rem;
+  color: #224466;
+}
+
+.card img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+/* Special layout for About Me and Uganda sections */
+.card.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* image + text side by side */
+  align-items: center;
+  gap: 1rem;
+}
+
+.card.split .text {
+  text-align: left;
+  color: #444;
+}
+
+/* Responsive stacking on smaller screens */
+@media (max-width: 768px) {
+  .card.split {
+    grid-template-columns: 1fr; /* stack image and text */
+  }
+}
+
+footer {
+  background: #336699;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
