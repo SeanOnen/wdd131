@@ -6,66 +6,76 @@
   <title>WDD 131 – Dynamic Web Fundamentals – Onen Sean Thomas Ongaya</title>
   <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Onen Sean Thomas Ongaya. Portfolio, assignments, and resources.">
   <meta name="author" content="Onen Sean Thomas Ongaya">
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="styles/base.css">
-
-  <!-- JS -->
   <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
 
-  <header>
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
-    <nav>
-      <a href="https://www.linkedin.com/in/sean-thomas-ongaya-onen?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BS%2B1C8V7nSJyyDWtmWjaCUQ%3D%3D" target="_blank">LinkedIn</a>
-      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Favorite Scripture</a>
-      <a href="#" target="_blank">Final Project</a>
-      <a href="https://github.com/" target="_blank">GitHub</a>
-      <a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a>
-      <a href="https://en.wikipedia.org/wiki/Uganda" target="_blank">Learn About Uganda</a>
-    </nav>
-  </header>
+<header>
+  <span id="course-title">WDD 131 – Dynamic Web Fundamentals - Onen Sean Thomas Ongaya</span>
+  <nav>
+    <a href="https://www.linkedin.com/in/sean-thomas-ongaya-onen" target="_blank">LinkedIn</a>
+    <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+    <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Favorite Scripture</a>
+    <a href="#" target="_blank">Final Project</a>
+  </nav>
+</header>
 
-  <main>
-    <h1>Onen Sean Thomas Ongaya</h1>
+<main class="two-column">
 
-    <!-- About Me section -->
-    <section class="card split">
+  <!-- Left column top -->
+  <section class="card split aboutme">
+    <div class="text">
       <h2>About Me</h2>
+      <p>
+        My name is Onen Sean Thomas Ongaya and I usually go by Sean.  
+        I was born and live in Uganda with my family. I am currently part of a trainee program at a beverage company, 
+        an experience that I greatly enjoy. I love traveling and getting new perspectives.
+      </p>
+    </div>
+    <div>
       <img src="images/profile.jpg" alt="An image of Onen">
-      <div class="text">
-        <p>My name is Onen Sean Thomas Ongaya and I usually go by Sean. I was born and live in Uganda with my family. I am currently part of a trainee program at a beverage company, an experience that I greatly enjoy. I love traveling and getting new perspectives.</p>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Uganda section -->
-    <section class="card split">
+  <!-- Right column spanning both rows -->
+  <section class="card resources">
+    <h2>Web Dev Resources</h2>
+    <ul>
+      <li><a href="https://dev.to/" target="_blank">Dev Community</a></li>
+      <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+      <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+      <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+    </ul>
+  </section>
+
+  <!-- Left column bottom -->
+  <section class="card split uganda">
+    <div class="text">
       <h2>Uganda</h2>
-      <img src="images/uganda.png" alt="Ugandan Flag">
-      <div class="text">
-        <p>Uganda, a landlocked country in East Africa, is home to 
-          <a href="https://goo.gl/maps/Q5T4k4Z9Rf4L6F8d9" target="_blank">Lake Victoria</a>, 
-          the Source of the Nile, and the Rwenzori Mountains, called the “Mountains of the Moon.” 
-          Known as the “Pearl of Africa,” it boasts rich wildlife, including endangered mountain gorillas, 
-          and diverse landscapes from savannas to forests. With a population of around 46 million, over 75% under 30, 
-          Uganda is culturally vibrant, with more than 50 ethnic groups and languages like Luganda widely spoken. 
-          Agriculture drives its economy, while music, art, and traditions make it a lively and colorful nation.
-        </p>
-      </div>
-    </section>
-  </main>
+      <p>
+        Uganda, a landlocked country in East Africa, is home to 
+        <a href="https://goo.gl/maps/Q5T4k4Z9Rf4L6F8d9" target="_blank">Lake Victoria</a>, 
+        the Source of the Nile, and the Rwenzori Mountains, called the “Mountains of the Moon.”  
+        Known as the “Pearl of Africa,” it boasts rich wildlife, including endangered mountain gorillas, 
+        and diverse landscapes from savannas to forests.  
+        With a population of around 46 million, over 75% under 30, Uganda is culturally vibrant, with more than 50 ethnic groups 
+        and languages like Luganda widely spoken. Agriculture drives its economy, while music, art, and traditions make it a lively and colorful nation.
+      </p>
+    </div>
+    <div>
+      <img src="images/ugandanflag.jpg" alt="Ugandan Flag">
+    </div>
+  </section>
+</main>
 
-  <footer>
-    <p>&copy; <span id="currentyear"></span> Onen Sean Thomas Ongaya – Uganda</p>
-    <p id="lastModified"></p>
-  </footer>
+<footer>
+  <p>&copy; <span id="currentyear"></span> Onen Sean Thomas Ongaya – Uganda</p>
+  <p id="lastModified"></p>
+</footer>
 
 </body>
 </html>

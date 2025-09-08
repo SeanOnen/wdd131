@@ -1,14 +1,22 @@
-/* Base styles */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9; /* lighter background */
+  background: #f9f9f9;
   color: #333;
 }
 
+.page-title {
+  text-align: center;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 2rem;
+  color: #224466;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 header {
-  background: #336699; /* lighter navy */
+  background: #4477aa;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -17,7 +25,7 @@ header {
 #course-title {
   display: block;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 nav {
@@ -35,67 +43,120 @@ nav a {
 
 nav a:hover {
   background: white;
-  color: #336699;
+  color: #4477aa;
   border-radius: 4px;
 }
 
-main {
-  max-width: 900px;
+main.two-column {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr; /* stacked on mobile */
-  gap: 1rem;
-}
-
-h1 {
-  text-align: center; /* Center the main title */
-  margin-bottom: 1rem;
-  color: #224466; /* softer dark blue */
+  grid-template-columns: 2fr 1fr; /* left 2/3, right 1/3 */
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
 }
 
 .card {
   background: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .card h2 {
-  text-align: center; /* lock About Me & Uganda at the top */
+  text-align: center;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
+  color: #224466;
+  border-bottom: 3px solid #4477aa;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.aboutme {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.uganda {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* sidebar spanning both rows */
+.resources {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  text-align: center;
+}
+
+.resources ul {
+  list-style: disc; /* bullet points */
+  padding-left: 1.5rem; /* indent bullets */
+  text-align: left; /* bullets aligned */
+  margin: 0 auto;
+  max-width: 200px; /* keeps list narrower */
+}
+
+.resources li {
+  margin-bottom: 0.75rem;
+}
+
+.resources li a {
+  font-weight: 600;
+  color: #4477aa;
+  text-decoration: underline;
+}
+
+.resources li a:hover {
   color: #224466;
 }
 
-.card img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-  border-radius: 6px;
-}
-
-/* Special layout for About Me and Uganda sections */
 .card.split {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* image + text side by side */
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 1rem;
+}
+
+.card.split img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
 }
 
 .card.split .text {
   text-align: left;
   color: #444;
+  line-height: 1.6;
 }
 
-/* Responsive stacking on smaller screens */
+/* responsive stacking */
 @media (max-width: 768px) {
+  main.two-column {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .resources {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
   .card.split {
-    grid-template-columns: 1fr; /* stack image and text */
+    grid-template-columns: 1fr;
+  }
+
+  .resources ul {
+    text-align: center;
+    padding-left: 0;
   }
 }
 
 footer {
-  background: #336699;
+  background: #4477aa;
   color: white;
   text-align: center;
   padding: 1rem;
