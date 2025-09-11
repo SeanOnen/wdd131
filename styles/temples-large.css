@@ -1,50 +1,40 @@
 /* Larger screens */
-@media screen and (min-width: 700px) {
-    .menu-button {
-        display: none
-    }
-
-    /* hide hamburger on larger screens */
+@media screen and (min-width: 700px){
+.menu-button{display:none} /* hide hamburger on larger screens */
 
 
-    .header-inner {
-        gap: 2rem;
-    }
-
-
-    .nav-list {
-        display: flex !important;
-        /* ensure visible */
-        flex-direction: row;
-        gap: 1rem;
-        align-items: center;
-        justify-content: flex-end;
-    }
-
-
-    .nav-list li a {
-        color: white;
-        padding: 0.35rem 0.65rem;
-    }
-
-
-    /* Change main gallery to multiple columns */
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-        /* three columns on larger screens */
-        gap: 1rem;
-    }
-
-
-    main {
-        padding: 1.5rem
-    }
+.header-inner{
+gap: 2rem;
 }
 
 
-/* Extra-large screens */
-@media screen and (min-width: 1100px) {
-    .gallery {
-        grid-template-columns: repeat(4, 1fr)
-    }
+.nav-list{
+display: flex !important; /* ensure visible */
+flex-direction: row;
+gap: 1rem;
+align-items: center;
+justify-content: flex-end;
+}
+
+
+.nav-list li a{
+color: navy;
+padding: 0.35rem 0.65rem;
+}
+
+
+/* Change main gallery to multiple columns */
+.gallery{
+grid-template-columns: repeat(3, 1fr); /* three columns on larger screens */
+gap: 1rem;
+}
+
+
+main{padding: 1.5rem}
+}
+
+
+/* Optional: extra-large screens */
+@media screen and (min-width: 1100px){
+.gallery{grid-template-columns: repeat(4, 1fr)}
 }

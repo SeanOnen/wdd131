@@ -8,19 +8,16 @@
     <meta name="description" content="Responsive temple album with hamburger navigation and JS interactions.">
     <meta name="author" content="Onen Sean Thomas Ongaya">
 
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-
     <!-- Mobile-first CSS then larger overrides -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
 
-
-    <!-- Defered JS -->
+    <!-- Deferred JS -->
     <script defer src="scripts/temples.js"></script>
 </head>
 
@@ -29,11 +26,9 @@
         <div class="header-inner">
             <h1 class="site-title">Temple Album</h1>
 
-
             <!-- Hamburger button (only visible on mobile) -->
             <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="primaryNav"
                 aria-label="Toggle navigation">☰</button>
-
 
             <nav id="primaryNav" class="primary-nav" aria-label="Primary navigation">
                 <ul class="nav-list">
@@ -47,10 +42,8 @@
         </div>
     </header>
 
-
     <main>
         <h2 class="page-heading">A Collection of Temples</h2>
-
 
         <section class="gallery">
             <figure>
@@ -62,7 +55,7 @@
                 <img src="images/abidjantemple.jpg" alt="Abidjan, Ivory Coast Temple">
                 <figcaption>Abidjan, Ivory Coast</figcaption>
             </figure>
-            
+
             <figure>
                 <img src="images/nairobitemple.jpg" alt="Nairobi, Kenya Temple">
                 <figcaption>Nairobi, Kenya</figcaption>
@@ -74,5 +67,38 @@
             </figure>
 
             <figure>
+                <img src="images/praiatemple.jpg" alt="Praia, Cape Verde Temple">
+                <figcaption>Praia, Cape Verde</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/kinshasatemple.jpg" alt="Kinshasa, DRC Temple">
+                <figcaption>Kinshasa, DR Congo</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/durbantemple.jpg" alt="Durban, South Africa Temple">
+                <figcaption>Durban, South Africa</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/accratemple.jpg" alt="Accra, Ghana Temple">
+                <figcaption>Accra, Ghana</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/bangkoktemple.jpg" alt="Bangkok, Thailand Temple">
+                <figcaption>Bangkok, Thailand</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; <span id="copyright-year"></span> ♦ Onen Sean Thomas Ongaya - Uganda ♦</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
 
 </html>

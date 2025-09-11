@@ -20,7 +20,7 @@ if (menuButton && primaryNav) {
     });
 
 
-    // If user resizes to large screen, ensure nav is visible and aria updated
+    // Optional: if user resizes to large screen, ensure nav is visible and aria updated
     window.addEventListener('resize', () => {
         if (window.innerWidth >= 700) {
             primaryNav.classList.remove('open');

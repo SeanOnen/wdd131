@@ -54,11 +54,12 @@ figcaption {
 
 
 footer {
+    background: #4477aa;
+    color: white;
     max-width: var(--max-width);
     margin: 1rem auto;
     padding: 1rem;
     text-align: center;
-    color: var(--muted);
 }
 
 
