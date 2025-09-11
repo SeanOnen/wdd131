@@ -1,4 +1,4 @@
-/* Mobile-first base styles */
+/* ====== Mobile-first base styles ====== */
 .nav-list li a:focus {
     background: rgba(255, 255, 255, 0.12);
     border-radius: 4px;
@@ -26,7 +26,7 @@ main {
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    /* mobile single column */
+    /* single column on mobile */
     gap: 1rem;
 }
 
@@ -65,5 +65,69 @@ footer {
 
 /* Utility: hide hamburger when nav shown in JS but accessible */
 .menu-button.hidden {
-    display: none
+    display: none;
+}
+
+/* ====== Base Styles ====== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header layout */
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Hamburger button visible only on mobile */
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Nav styles (mobile hidden by default) */
+.primary-nav {
+    display: none;
+    /* toggled open via JS */
+}
+
+.primary-nav.open {
+    display: block;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+/* Nav links */
+.primary-nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover/focus effect on nav links 
+   :hover pseudo-class is used on nav anchor tags */
+.primary-nav a:hover,
+.primary-nav a:focus {
+    background-color: #004080;
+    /* customize as needed */
+    color: #fff;
 }

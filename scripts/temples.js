@@ -38,3 +38,4 @@ const lastModSpan = document.getElementById('last-modified');
 
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 if (lastModSpan) lastModSpan.textContent = document.lastModified;
+
