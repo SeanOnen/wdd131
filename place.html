@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Uganda - the Pearl of Africa with stunning landscapes and rich culture.">
+    <meta name="author" content="Onen Sean Thomas Ongaya">
+    <title>Discover Uganda</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Discover Uganda</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/hero-desktop.jpg">
+                <img src="images/hero-mobile.jpg" alt="Ugandan landscape with Lake Victoria">
+            </picture>
+        </section>
+        <section class="info-section">
+            <div class="data">
+                <h2 class="section-title">Data</h2>
+                <div class="data-details">
+                    <p><strong>Population:</strong> 45 million</p>
+                    <p><strong>Capital:</strong> Kampala</p>
+                    <p><strong>Area:</strong> 241,038 km²</p>
+                    <p><strong>Language:</strong> English, Swahili</p>
+                    <p><strong>Currency:</strong> Ugandan Shilling</p>
+                </div>
+            </div>
+            <div class="weather">
+                <h2 class="section-title">Weather</h2>
+                <div class="weather-details">
+                    <img src="images/weather_icon.svg" alt="Weather icon" class="weather-icon">
+                    <p><strong>Condition:</strong> Sunny</p>
+                    <p><strong>Temperature:</strong> 27°C</p>
+                    <p><strong>Wind Speed:</strong> 8 km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> 💥 Onen Sean Thomas Ongaya - Uganda 💥 Last Modified: <span id="last-modified" ></span></p>
+    </footer>
+    <script src="scripts/place.js"></script>
+</body>
+</html>

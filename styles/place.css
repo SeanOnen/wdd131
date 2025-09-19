@@ -1,0 +1,248 @@
+/*Global CSS variables based on Uganda's flag with accessibility adjustments */
+:root {
+    --primary-color: #1A1A1A; /* Dark grey instead of pure black */
+    --secondary-color: #FFCA28; /* Warm yellow for better contrast */
+    --accent-color: #B71C1C; /* Deep red for accessibility */
+    --background-color: #FAFAFA; /* Off-white for cleaner base */
+    --text-color: #333;
+    --border-width: 2px;
+}
+
+/* General reset and typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background: var(--background-color); 
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header, main, footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header */
+header {
+    background: var(--accent-color); 
+    color: var(--background-color);
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hero:hover img {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Info Section (Combined Data and Weather) */
+.info-section {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    background: url('../images/background-uganda.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    border: var(--border-width) solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.info-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color); 
+    opacity: 0.5; 
+    z-index: 1;
+}
+
+.data, .weather {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.data {
+    width: 45%;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(183, 28, 28, 0.1);
+    border: var(--border-width) solid var(--accent-color);
+    background-color: #FFFFFF; /* Solid white background */
+}
+
+.data:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(183, 28, 28, 0.2);
+}
+
+.weather {
+    width: 45%;
+    margin-left: auto;
+    box-shadow: 0 4px 15px rgba(255, 202, 40, 0.1);
+    border: var(--border-width) solid var(--secondary-color);
+    margin-top: 10rem;
+    background-color: #FFFFFF; /* Solid white background */
+}
+
+.weather:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 202, 40, 0.2);
+}
+
+.data .section-title, .weather .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color); 
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: inline-block;
+}
+
+.data .section-title::before {
+    margin-right: 0.5rem;
+}
+
+.data .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background: var(--accent-color); 
+}
+
+.weather .section-title::before {
+    margin-right: 0.5rem;
+}
+
+.weather .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+.data-details, .weather-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.data-details p, .weather-details p {
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    display: none;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.weather-icon:hover {
+    transform: rotate(15deg);
+}
+
+/* Footer */
+footer {
+    background: var(--accent-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        height: 200px;
+    }
+
+    .info-section {
+        padding: 1rem;
+        background-attachment: scroll;
+    }
+
+    .data, .weather {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .weather {
+        margin-top: 1rem;
+    }
+
+    .weather .section-title::after {
+        display: none;
+    }
+
+    .weather-icon {
+        display: block;
+    }
+
+    .data-details, .weather-details {
+        display: flex;
+        flex-direction: column;
+    }
+}
