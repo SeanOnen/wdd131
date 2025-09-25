@@ -1,0 +1,70 @@
+/* ====== Larger screens (tablet/desktop) ====== */
+@media screen and (min-width: 700px) {
+
+  /* hides hamburger on larger screens */
+  .menu-button {
+    display: none;
+  }
+
+  .header-inner {
+    gap: 2rem;
+  }
+
+  /* shows nav horizontally */
+  .primary-nav {
+    display: block !important;
+  }
+
+  .nav-list {
+    display: flex !important;       /* ensures visible */
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav-list li a {
+    color: navy;
+    padding: 0.35rem 0.65rem;
+  }
+
+  /* changes main gallery to multiple columns */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* three columns on larger screens */
+    gap: 1rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+}
+
+/* ====== Extra-large screens (big desktops) ====== */
+@media screen and (min-width: 1100px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ====== Mid-size fallback (600px+) ====== */
+@media screen and (min-width: 600px) {
+
+  /* Show nav horizontally on large screens */
+  .primary-nav {
+    display: block !important;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .menu-button {
+    display: none; /* hides hamburger */
+  }
+
+  /* Flexible multi-column gallery on large screens */
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}

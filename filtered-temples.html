@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temple Album</title>
+  <meta name="description" content="Responsive temple album with filtering and lazy loading.">
+  <meta name="author" content="Onen Sean Thomas Ongaya">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+  <!-- JS -->
+  <script defer src="scripts/filtered-temples.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="site-title">Filtered Temple Album</h1>
+
+      <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="primaryNav"
+        aria-label="Toggle navigation">☰</button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Old</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Large</a></li>
+          <li><a href="#">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="page-heading">A Collection of Temples</h2>
+
+    <!-- Empty gallery to be filled by JS -->
+    <section class="gallery" id="templeGallery"></section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; <span id="copyright-year"></span> ♦ Onen Sean Thomas Ongaya ♦</p>
+      <p>Last modified: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>
