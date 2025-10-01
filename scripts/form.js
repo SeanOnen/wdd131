@@ -34,4 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
         option.textContent = product.name;
         select.appendChild(option);
     });
+
+    // Set default date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('installDate').value = today;
 });

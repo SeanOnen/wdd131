@@ -1,4 +1,3 @@
-// scripts/review.js
 const products = [
   {
     id: "fc-1888",
