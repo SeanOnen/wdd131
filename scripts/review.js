@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Increment counter only on successful form submission
         let count = parseInt(localStorage.getItem('reviewCount') || '0', 10) + 1;
         localStorage.setItem('reviewCount', count.toString());
-        document.getElementById('counter').textContent = `This is your #${count} review submitted.`;
+        document.getElementById('counter').textContent = `You have submitted ${count} review(s) so far.`;
     } else {
         // If not a submission (e.g., direct access or refresh), show current count without incrementing
         const count = parseInt(localStorage.getItem('reviewCount') || '0', 10);
