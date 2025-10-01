@@ -40,9 +40,9 @@ header {
     border-radius: 0 0 8px 8px;
 }
 .logo img {
-    width: 100px;
-    height: 80px;
-    object-fit: cover;
+    width: 120px;
+    height: 120px;
+    object-fit: fill;
 }
 .site-name {
     flex: 1;
@@ -91,30 +91,22 @@ header {
 /* Second Section: Section Names Row */
 .section-names {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: 1fr 2fr 1fr; /* Match .three-columns layout */
+    gap: 20px; /* Same spacing as .three-columns */
     padding: 20px;
-    background: white;
+    background: white; /* White background like other sections */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
     margin: 20px 0;
 }
+
 .name-col {
     padding: 15px;
-    background: #f0f8ff; /* Light blue tint */
-    border: 1px solid #2196F3;
+    border: 2px solid #4CAF50; /* Green border */
     border-radius: 4px;
     font-weight: bold;
-    color: #2196F3;
-}
-
-.name-col:hover {
-    background: #2196F3;
-    color: white;
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+    color: #4CAF50; /* Black text */
 }
 
 /* Three Columns Main: Unequal Widths (Left 1fr, Middle 2fr Wider, Right 1fr) */
@@ -171,7 +163,7 @@ footer {
         width: 100%;
     }
     .section-names {
-        grid-template-columns: 1fr;
+        display: none; /* Hide section names on mobile */
     }
     .three-columns {
         grid-template-columns: 1fr;
