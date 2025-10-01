@@ -39,3 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const today = new Date().toISOString().split('T')[0];
     document.getElementById('installDate').value = today;
 });
+
+// Footer dynamic values: copyright year and last modified
+const yearSpan = document.getElementById('copyright-year');
+const lastModSpan = document.getElementById('last-modified');
+
+
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+if (lastModSpan) lastModSpan.textContent = document.lastModified;
