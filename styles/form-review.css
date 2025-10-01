@@ -1,5 +1,6 @@
+/* styles/form-review.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
@@ -51,6 +52,7 @@ textarea {
     font-size: 24px;
     cursor: pointer;
     margin-bottom: 5px;
+    color: #ccc;
 }
 
 .rating-group input[type="radio"] {
@@ -58,7 +60,7 @@ textarea {
 }
 
 .rating-group input[type="radio"]:checked + .star-label {
-    color: #ffd700; /* Gold for filled stars */
+    color: #ffd700; /* Gold for selected stars */
 }
 
 .checkbox-group {
@@ -91,6 +93,28 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+#confirmation-content p {
+    margin-bottom: 10px;
+}
+
+#counter {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
