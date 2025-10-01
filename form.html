@@ -6,12 +6,8 @@
     <meta name="description" content="Submit your detailed review for our innovative products including flux capacitor, power laces, and more. Share your experience to help others.">
     <meta name="author" content="Onen Sean Thomas Ongaya">
     <title>Product Review Form</title>
+    <!-- Only CSS file, no inline or Google Fonts link -->
     <link rel="stylesheet" href="styles/form-review.css">
-
-    <!-- Google Fonts via @import -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-    </style>
 </head>
 <body>
     <main class="container">
@@ -27,20 +23,20 @@
             <div class="form-group">
                 <label>Overall Rating</label>
                 <div class="rating-group">
-                    <input type="radio" id="rating1" name="rating" value="1" required>
-                    <label for="rating1" class="star-label">☆☆☆☆☆</label>
-
-                    <input type="radio" id="rating2" name="rating" value="2" required>
-                    <label for="rating2" class="star-label">☆☆☆☆</label>
-
-                    <input type="radio" id="rating3" name="rating" value="3" required>
-                    <label for="rating3" class="star-label">☆☆☆</label>
-
-                    <input type="radio" id="rating4" name="rating" value="4" required>
-                    <label for="rating4" class="star-label">☆☆</label>
-
                     <input type="radio" id="rating5" name="rating" value="5" required>
                     <label for="rating5" class="star-label">☆</label>
+
+                    <input type="radio" id="rating4" name="rating" value="4" required>
+                    <label for="rating4" class="star-label">☆</label>
+
+                    <input type="radio" id="rating3" name="rating" value="3" required>
+                    <label for="rating3" class="star-label">☆</label>
+
+                    <input type="radio" id="rating2" name="rating" value="2" required>
+                    <label for="rating2" class="star-label">☆</label>
+
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                    <label for="rating1" class="star-label">☆</label>
                 </div>
             </div>
 
@@ -89,7 +85,6 @@
         <p>&copy; 2025 Onen Sean Thomas Ongaya. All rights reserved.</p>
     </footer>
 
-    <!-- JS script without defer -->
     <script src="scripts/form.js"></script>
 </body>
 </html>
