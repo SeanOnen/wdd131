@@ -1,11 +1,11 @@
 /* Base Styles */
 body {
-  font-family: 'Roboto', Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 20px;
-  line-height: 1.6;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
 }
 
 /* Form Container */
@@ -23,6 +23,7 @@ h1 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 /* Form Layout */
@@ -58,10 +59,10 @@ textarea:focus {
     outline: none;
 }
 
-/* Ratings */
+/* Ratings (Stars) */
 .rating-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Align left to right */
     gap: 6px;
 }
 
@@ -76,8 +77,8 @@ textarea:focus {
     display: none;
 }
 
-.rating-group input[type="radio"]:checked + .star-label {
-    color: #ffd700; /* Gold for selected stars */
+.rating-group input[type="radio"]:checked ~ .star-label {
+    color: #ffd700; /* Highlight selected stars gold */
 }
 
 /* Checkboxes */
