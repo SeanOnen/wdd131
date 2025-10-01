@@ -1,4 +1,4 @@
-/* Base Styles */
+/* styles/form-review.css */
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #f4f4f4;
@@ -8,118 +8,93 @@ body {
     line-height: 1.6;
 }
 
-/* Form Container */
 .container {
     max-width: 600px;
     margin: 0 auto;
-    background: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Headings */
 h1 {
     text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: 700;
+    color: #4a4a4a;
 }
 
-/* Form Layout */
 .form-group {
     margin-bottom: 20px;
 }
 
 label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     font-weight: bold;
-    color: #444;
 }
 
-/* Inputs & Textareas */
 input[type="text"],
 input[type="date"],
 select,
 textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     box-sizing: border-box;
-    font-size: 15px;
-    transition: border-color 0.3s;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-/* Ratings (Stars) */
 .rating-group {
     display: flex;
-    flex-direction: row; /* Align left to right */
-    gap: 6px;
+    flex-direction: column;
 }
 
 .star-label {
-    font-size: 28px;
+    font-size: 24px;
     cursor: pointer;
+    margin-bottom: 5px;
     color: #ccc;
-    transition: color 0.3s;
 }
 
 .rating-group input[type="radio"] {
     display: none;
 }
 
-.rating-group input[type="radio"]:checked ~ .star-label {
-    color: #ffd700; /* Highlight selected stars gold */
+.rating-group input[type="radio"]:checked + .star-label {
+    color: #ffd700; /* Gold for selected stars */
 }
 
-/* Checkboxes */
 .checkbox-group {
     display: flex;
     flex-direction: column;
-    gap: 5px;
 }
 
 .checkbox-label {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
     cursor: pointer;
-    font-size: 14px;
-    color: #444;
 }
 
 .checkbox-label input[type="checkbox"] {
+    width: auto;
     margin-right: 10px;
 }
 
-/* Buttons */
 button {
     background-color: #007bff;
-    color: #fff;
-    padding: 14px;
+    color: white;
+    padding: 12px 20px;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
     width: 100%;
     font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
     background-color: #0056b3;
-    transform: translateY(-2px);
 }
 
-/* Confirmation Page */
 #confirmation-content p {
     margin-bottom: 10px;
 }
@@ -128,16 +103,13 @@ button:hover {
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
-    font-size: 18px;
 }
 
-/* Links */
 a {
     display: block;
     text-align: center;
     margin-top: 20px;
     color: #007bff;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -145,30 +117,23 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Footer */
 footer {
     text-align: center;
     margin-top: 40px;
     color: #666;
-    font-size: 14px;
 }
 
-/* Mobile Responsiveness */
+/* Mobile responsiveness */
 @media (max-width: 600px) {
     body {
         padding: 10px;
     }
 
     .container {
-        padding: 18px;
+        padding: 15px;
     }
 
     .star-label {
-        font-size: 24px;
-    }
-
-    button {
-        padding: 12px;
-        font-size: 15px;
+        font-size: 20px;
     }
 }
