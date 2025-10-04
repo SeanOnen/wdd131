@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Technologies - PrecisionAg Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Font Awesome for search icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="images/logo.png" alt="PrecisionAg Hub Logo">
+    </div>
+    <div class="site-name">
+        <h1>PrecisionAg Hub</h1>
+    </div>
+    <div class="right-section">
+        <nav class="topics">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tools.html" class="active">Tools & Technologies</a></li>
+                <li><a href="cases.html">Case Studies</a></li>
+                <li><a href="resources.html">Resources/Contact</a></li>
+            </ul>
+        </nav>
+        <form class="search-form" role="search" onsubmit="return false;">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search the site..." autocomplete="off" aria-label="Search the site">
+                <i class="fas fa-search search-icon" tabindex="0" role="button" aria-label="Search"></i>
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </form>
+    </div>
+</header>
+
+
+    <main>
+        <section>
+            <h2>Key Technologies in Precision Agriculture</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="images/gpsmapping.jpg" alt="GPS Soil Mapping" loading="lazy">
+                    <h3>GPS Soil Mapping</h3>
+                    <p>Enables precise field mapping for variable-rate applications, optimizing inputs across varied terrain.</p>
+                </div>
+                <div class="card">
+                    <img src="images/iotsensors.webp" alt="IoT Sensors" loading="lazy">
+                    <h3>IoT Sensors</h3>
+                    <p>Real-time monitoring of soil moisture and crop health via connected devices.</p>
+                </div>
+                <div class="card">
+                    <img src="images/irrigation.jpg" alt="AI Irrigation" loading="lazy">
+                    <h3>AI-Driven Irrigation</h3>
+                    <p>Uses forecasts and sensors for automated, efficient water distribution.</p>
+                </div>
+            </div>
+            <!-- Infographic -->
+            <img src="images/infographic.jpg" alt="Precision Ag Infographic" style="width:100%; border-radius:8px;">
+        </section>
+        <section>
+            <h2>Interactive Tool Recommender</h2>
+            <form class="quiz-form">
+                <label>Farm Size:</label>
+                <select id="farm-size">
+                    <option value="small">Small (&lt;50 acres)</option>
+                    <option value="medium">Medium (50-500 acres)</option>
+                    <option value="large">Large (&gt;500 acres)</option>
+                </select>
+                <label>Crop Type:</label>
+                <select id="crop-type">
+                    <option value="corn">Corn</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fruits">Fruits</option>
+                </select>
+                <button type="submit">Get Recommendations</button>
+            </form>
+            <div class="quiz-result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; <span id="copyright-year"></span> PrecisionAg Hub. Educational resource for sustainable farming.</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources/Contact - PrecisionAg Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for search icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="PrecisionAg Hub Logo">
+        </div>
+        <div class="site-name">
+            <h1>PrecisionAg Hub</h1>
+        </div>
+        <div class="right-section">
+            <nav class="topics">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tools.html">Tools & Technologies</a></li>
+                    <li><a href="cases.html">Case Studies</a></li>
+                    <li><a href="resources.html" class="active">Resources/Contact</a></li>
+                </ul>
+            </nav>
+            <form class="search-form" role="search" onsubmit="return false;">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search the site..." autocomplete="off" aria-label="Search the site">
+                    <i class="fas fa-search search-icon" tabindex="0" role="button" aria-label="Search"></i>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </form>
+
+    </header>
+
+    <main>
+        <section>
+            <h2>Downloadable Resources</h2>
+            <ul>
+                <li><a href="https://www.montana.edu/extension/montguides/montguidepdfsforstore/MT202502AG_Precision_Ag_new06.25.pdf"
+                        target="_blank">Precision Agriculture Guide - Montana State University (PDF)</a></li>
+                <li><a href="https://ec.europa.eu/programmes/erasmus-plus/project-result-content/0b8c5459-1215-4cdb-bc50-585a053b60ef/IO1_PreAgri_handbook-EN.pdf"
+                        target="_blank">Precision Agriculture Handbook for Beginners - EU (PDF)</a></li>
+                <li><a href="https://publications.ca.uky.edu/files/pa2.pdf" target="_blank">Guidelines for Adopting
+                        Precision Practices - University of Kentucky (PDF)</a></li>
+                <li><a href="https://extension.missouri.edu/media/wysiwyg/Extensiondata/Pub/pdf/envqual/wq0450.pdf"
+                        target="_blank">Precision Agriculture Introduction - University of Missouri (PDF)</a></li>
+            </ul>
+            <h3>Further Reading</h3>
+            <ul>
+                <li><a href="https://igrownews.com/precision-agriculture-transforming-farming-with-technology/"
+                        target="_blank">Precision Ag: Current State & Technologies</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Question or Project Idea" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="message"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; <span id="copyright-year"></span> PrecisionAg Hub. Educational resource for sustainable farming.</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/script.js" defer></script>
+</body>
+
+</html>
